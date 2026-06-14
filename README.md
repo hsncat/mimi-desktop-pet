@@ -1,23 +1,12 @@
 # Mimi Desktop Pet
 
-一个用 `C:\Users\hansh\Desktop\咪咪.png` 做成的 Windows 桌面宠物。
+一个 Windows 桌面宠物。小猫动作来自 `assets/video-actions` 中的视频素材，运行时会抠除背景并显示在透明置顶窗口中。
 
 ## 运行
 
 ```powershell
+npm.cmd install
 npm.cmd start
-```
-
-## 重新生成小猫素材
-
-```powershell
-npm.cmd run prepare-assets
-```
-
-也可以传入另一张图片：
-
-```powershell
-npm.cmd run prepare-assets -- "C:\path\to\cat.png"
 ```
 
 ## 打包
@@ -31,15 +20,11 @@ npm.cmd run package
 ## 操作
 
 - 拖动小猫：移动桌宠位置。
-- 点击小猫：触发弹跳、气泡和爱心。
-- 悬停右上角按钮：关闭桌宠。
+- 点击小猫：切换到下一个视频动作。
+- 悬停右上角按钮：显示关闭按钮。
 
-## 动作
+## 素材
 
-咪咪会自动随机切换这些动作：
-
-- 待机呼吸
-- 舔爪子
-- 趴着打盹
-- 甩尾巴
-- 被拖动时晃晃
+- `assets/mimi-cutout.png`：视频加载失败时的兜底图片。
+- `assets/mimi.ico`：应用和快捷方式图标。
+- `assets/video-actions/action-*.mp4`：桌宠动作视频。
