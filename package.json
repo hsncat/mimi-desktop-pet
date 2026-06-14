@@ -1,0 +1,41 @@
+{
+  "name": "mimi-desktop-pet",
+  "version": "0.1.0",
+  "description": "A tiny Windows desktop pet made from Mimi's picture.",
+  "main": "src/main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "prepare-assets": "node scripts/prepare-cat-asset.mjs",
+    "package": "electron-builder --win --dir"
+  },
+  "keywords": [
+    "desktop-pet",
+    "electron",
+    "cat"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@imgly/background-removal-node": "^1.4.5",
+    "electron": "^37.2.3",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {},
+  "build": {
+    "appId": "local.mimi.desktop-pet",
+    "productName": "Mimi Desktop Pet",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "assets/mimi.ico",
+      "target": "dir"
+    }
+  }
+}

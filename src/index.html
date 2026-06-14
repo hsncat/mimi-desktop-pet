@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimi Desktop Pet</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="pet-stage" aria-label="Mimi desktop pet">
+      <button class="close-button" type="button" title="Close Mimi" aria-label="Close Mimi">x</button>
+      <div class="bubble" aria-hidden="true">Meow</div>
+      <button class="pet-button" type="button" aria-label="Pet Mimi">
+        <canvas class="pet-video-canvas" width="220" height="240" aria-hidden="true"></canvas>
+        <img class="pet-fallback" src="../assets/mimi-cutout.png" alt="">
+      </button>
+    </main>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
